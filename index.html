@@ -1,97 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jezzer Portfolio</title>
 
-	<title>Pagination</title>
-	<style type="text/css">
-	body{
-		background-color:rgb(50,50,50);
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-	.main{
-		background-color:rgb(20,20,20);
-		width: 100%;
-		padding:10px;
-		display:flex;
-		flex-wrap:wrap;
-		justify-content:center;
-	}
-	.boxshadow{
-		box-shadow:0px 0px 5px skyblue;
-		border-radius:5px;
-	}
-	
-	.idiv{
-		padding:5px;
-		margin:5px;
-		width:150px;
-		height:200px;
-		text-align:center;
-		color:whitesmoke;
-	}
-	.active-button
-	{
-		box-shadow: 0px 0px 10px skyblue;
-		transform:scale(1.1,1.1);
-	}
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
 
-	.btn-div
-	{
-		width: 100%;
-		text-align: center;
-		margin-top: 5px;
-	}
+<style>
 
-	.page-buttons
-	{
-		margin:3px;
-		border-radius: 10px;
-		background-color:rgb(30,30,30);
-		color:whitesmoke;
-		width:40px;
-		height:40px;
-	}
-	
-	.input-main-div{
-		padding:10px;
-		display:flex;
-		width:100%;
-		color:whitesmoke;
-		background-color:rgb(20,20,20);
-		justify-content:center;
-		
-	}
-	
-	@media only screen and (min-width: 768px) 
-	{
-	 	 /* For desktop: */
-		.main
-	  	{
-			background-color:rgb(20,20,20);
-			width: 700px;
-			padding:10px;
-			display:flex;
-			flex-wrap:wrap;
-			justify-content:center;
-		}
-	}
-	</style>
-	</head>
-	<body>
-		
-		<!-- <div class = "input-main-div">
-			<div><label>Number of books to show</label><input type = "number" min="1" id = "num-of-book"><button onclick="SubmitNumberOfBooksToshow()">Submit</button></div>
-		</div> -->
-		<div class = "main">
-	
-		</div>
-	</body>
-	
-	<script src="scripts/GeneratePage.js"></script>
-	<script src="scripts/SubmitFunctions.js"></script>
+.test123{
+  display: block;
+}
+
+</style>
+</head>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="my-nav-large w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+    <!-- Avatar image in top left corner -->
+    <div style="width:100%;padding:5px; height:120px; border-radius: 25px; overflow: hidden;">
+      <img src="MM.jpg" style="width:100%; height:100%;">
+    </div>
+    
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black w3-hover-black">
+      <i class="fa fa-home w3-xxlarge"></i>
+      <p>HOME</p>
+    </a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-user w3-xxlarge"></i>
+      <p>ABOUT</p>
+    </a>
+    <a href="#games" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-gamepad w3-xxlarge"></i>
+      <p>GAMES</p>
+    </a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+      <i class="fa fa-envelope w3-xxlarge"></i>
+      <p>CONTACT</p>
+    </a>
+  </nav>
+    
+
+  <!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="my-nav-small w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+    <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+      <a href="#" class="black-ease w3-bar-item w3-button" style="width:25% !important">HOME</a>
+      <a href="#about" class="black-ease w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+      <a href="#games" class="black-ease w3-bar-item w3-button" style="width:25% !important">GAMES</a>
+      <a href="#contact" class="black-ease w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-25 w3-center w3-black" id="home">
+    <p style="margin-top: 30px;">Hello, welcome to my page.</p>
+    <h1 class="w3-jumbo"><span>I'm</span> Jezzer Cayago.</h1>
+     <p>A freelance Game Developer.</p>
+
+    <div class = "home main-page">
+      <div class = "header-img">
+        <img src="myGame.png" alt="image" class="w3-image" width="992px" height="1108px">
+        </div>
+    </div>
+
+    <div class = "about main-page hide-page">
+      <div class = "w3-container">
+        <h1>About Me</h1>
+      </div>
+    </div>
+    
+    <div class = "games main-page hide-page">
+      <div class = "w3-container">
+         <h1>Games</h1>
+      </div>
+    </div>
+  
+    <div class = "contact main-page hide-page">
+      <div class = "w3-container">
+        <h1>Contact</h1>
+      </div>
+    </div>
+    
+  </header>
+</div>
+
+
+
+
+
+    
+
+</body>
+<script src="script.js"></script>
 </html>
+
+
+  
+
+
+
+
+
