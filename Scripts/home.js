@@ -11,6 +11,7 @@ loadingLetters.forEach(element => {
     const loadText = document.createElement("h1");
     loadText.setAttribute("class", "loading");
     loadText.setAttribute("style", "animation-delay:" + counter + "s;");
+    loadText.setAttribute("style", "-webkit-animation-delay:" + counter + "s;");
     
     loadText.innerHTML += element;
     mainPage.append(loadText);

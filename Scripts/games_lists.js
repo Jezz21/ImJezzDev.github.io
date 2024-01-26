@@ -1,15 +1,25 @@
 const publishedGamesList = [];
 const prototypeGamesList = [];
 
+
 PublishedGamesDetails();
 PrototypeGamesDetails();
 SetGameList(".games-list-container", publishedGamesList);
 SetGameList(".prototype-list-container", prototypeGamesList);
 
+const gameContainerClass = document.querySelectorAll(".game-container");
+
+gameContainerClass.forEach(element => {
+    element.classList.toggle("game-container-anim");
+});
+
 function SetGameList(tag, list)
 {
     const gameContainer = document.querySelector(tag);
     
+    let animationDelay = 0;
+    let animationDelayInterval = 0.15;
+
     for (let index = 0; index < list.length; index++) {
         const gameDiv = document.createElement("div");
         const gameLink = document.createElement("a");
@@ -17,6 +27,8 @@ function SetGameList(tag, list)
         const gameParagraph = document.createElement("p");
 
         gameDiv.setAttribute("class", "game-container");
+        gameDiv.setAttribute("style", "animation-delay:" + animationDelay + "s;");
+        gameDiv.setAttribute("style", "-webkit-animation-delay:" + animationDelay + "s;");
         gameLink.setAttribute("href", list[index].objectLink);
         gameLink.setAttribute("target", "_blank");
         gameImg.setAttribute("src", list[index].objectImage);
@@ -28,6 +40,8 @@ function SetGameList(tag, list)
         gameDiv.append(gameParagraph);
         gameLink.append(gameDiv);
         gameContainer.append(gameLink);
+
+        animationDelay += animationDelayInterval;
     }
 }
 
