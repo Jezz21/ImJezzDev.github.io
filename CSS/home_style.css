@@ -1,0 +1,92 @@
+.enemy-container{
+    background-image: url("../Images/Town.png");
+    background-repeat: no-repeat;
+    background-size: 500px 100%;
+    background-position: center;
+
+    height: 350px;
+    overflow: hidden;
+
+}
+
+.enemy-container p{
+    font-family: fantasy;
+    text-shadow: 0 0 3px black;
+}
+
+.user-select-none{
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.enemy-image{
+
+    width:300px;
+    height:90%;
+
+
+    -webkit-width:300px;
+    -webkit-height:300px;
+    -webkit-user-drag: none;
+}
+
+.enemy-idle{
+    animation: idle-anim 1s linear infinite;
+    scale: 1;
+    animation-fill-mode: both;
+
+}
+
+@keyframes idle-anim {
+    0%{scale: 1; translate: 0px 0px;}
+    50%{scale: 0.98 1.02; translate: 0px -5px;}
+    100%{scale: 1; translate: 0px 0px;}
+
+}
+
+.enemy-damaged{
+    animation: damage-anim 0.3s linear;
+    animation-fill-mode: both;
+}
+
+.dead{
+    animation: dead-anim 1s linear forwards;
+}
+
+@keyframes dead-anim {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+@keyframes damage-anim {
+    0%{opacity: 0; scale: 0.95;}
+    25%{opacity: 1}
+    50%{opacity: 0}
+    75%{opacity: 1 ;}
+    100%{opacity: 1; scale: 1}
+}
+
+.my-button{
+    background-color: rgb(34, 34, 34);
+    color: whitesmoke;
+    font-family: fantasy;
+}
+
+.blocker{
+
+    /*background: rgba(0, 0, 0, .3);*/
+    padding-left: inherit;
+    padding-top: inherit;
+    top:0;
+    left:0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+}
+

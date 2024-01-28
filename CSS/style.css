@@ -3,22 +3,27 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 /* Set the width of the sidebar to 120px */
 .w3-sidebar {width: 120px;background: #222;}
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
+#main {margin-left: 120px; padding: 25px;}
 /* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+@media only screen and (max-width: 600px) {
+    #main {margin-left: 0; padding: 1px;}
+    .my-header p{
+        margin-top: 50px;
+    }
+    
+}
+
 
 
 .main-page
 {
     padding:10px;
-    width:100%;
     color:whitesmoke;
     background-color:#222;
-    margin: 10px;	        
+    margin: 10px;        
     border-radius: 10px;
 
     -webkit-padding:10px;
-    -webkit-width:100%;
     -webkit-color:whitesmoke;
     -webkit-background-color:#222;
     -webkit-margin: 10px;	        
@@ -87,86 +92,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     -webkit-text-align:left;
 }
 
-.game-container img
-{
-    width: 100%;
-    height: 100px;
-    border-radius: 10px;
-
-    -webkit-width: 100%;
-    -webkit-height: 100px;
-    -webkit-border-radius: 10px;
-}
-.game-container
-{
-    width: 150px;
-    min-height:200px;
-    background: black;
-    padding: 5px;
-    margin: 10px;
-    border-radius: 10px;
-    opacity: 0;
-
-    -webkit-width: 150px;
-    -webkit-min-height:200px;
-    -webkit-background: black;
-    -webkit-padding: 5px;
-    -webkit-margin: 10px;
-    -webkit-border-radius: 10px;
-    -webkit-opacity: 0;
-
-}
-
-.game-container-anim{
-    animation: anim 0.5s ease-out forwards;
-    -webkit-animation: anim 0.5s ease-out forwards;
-}
-
-@keyframes anim {
-    0%{scale: 1.20; -webkit-scale: 1.20; opacity: 0; -webkit-opacity: 0;}
-    100%{scale: 1; -webkit-scale: 1; opacity: 1; -webkit-opacity: 1;}
-
-}
-
-
-.games-list-container
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    
-    -webkit-display: flex;
-    -webkit-flex-wrap: wrap;
-    -webkit-justify-content: center;
-    -webkit-padding: 20px;
-}
-
-.prototype-list-container
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-
-    -webkit-display: flex;
-    -webkit-flex-wrap: wrap;
-    -webkit-justify-content: center;
-    -webkit-padding: 20px;
-}
-
-.games-list-container a
-{
-    text-decoration: none;
-    -webkit-text-decoration: none;
-}
-
-.prototype-list-container a
-{
-    text-decoration: none;
-    -webkit-text-decoration: none;
-}
-
 .loading{
     padding: 5px;
     animation: loading-anim 1s ease-out 1;
@@ -176,7 +101,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     -webkit-animation: loading-anim 1s ease-out 1;
     -webkit-transform: scale(1);
 }
-
 
 @keyframes loading-anim{
     0%{transform: scale(1); -webkit-transform: scale(1);}

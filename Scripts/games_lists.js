@@ -17,8 +17,8 @@ function SetGameList(tag, list)
 {
     const gameContainer = document.querySelector(tag);
     
-    let animationDelay = 0;
-    let animationDelayInterval = 0.15;
+    animationDelay = 0;
+    animationDelayInterval = 0.15;
 
     for (let index = 0; index < list.length; index++) {
         const gameDiv = document.createElement("div");
@@ -84,8 +84,6 @@ function PublishedGamesDetails(){
     "https://gamemonetize.com/summer-beach-and-girls-puzzle-game"
     ));
 }
-
-
 
 function MakeObject(name, imageSource, link)
 {
