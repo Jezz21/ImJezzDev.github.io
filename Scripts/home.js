@@ -70,7 +70,7 @@ function MakeAttackButtons(){
     }
 }
 function UpdateHP(){
-    if(currentHp < 0){
+    if(currentHp <= 0){
         
         currentHp = 0;
         EnemyDead();
