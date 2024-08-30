@@ -52,10 +52,13 @@ function PrototypeGamesDetails()
     "https://jac-games.itch.io/first-rpg-prototype"
     ));
     prototypeGamesList.push(MakeObject("2D turn-based RPG", 
-    "Images/NO_IMAGE.jpg", 
+    "Images/turn-based-battle.jpg", 
     "https://jac-games.itch.io/2d-turn-based-rpg-prototype"
     ));
-    
+    prototypeGamesList.push(MakeObject("Visual Novel Prototype", 
+    "Images/VN_Proto.jpg", 
+    "https://jac-games.itch.io/visual-novel-prototype"
+    ));
 }
 
 function PublishedGamesDetails(){
